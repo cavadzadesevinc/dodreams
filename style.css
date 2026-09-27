@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    background-attachment: fixed;
+    color: #4a4a4a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Giriş Pəncərəsi (Modal) */
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 17, 203, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.auth-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(118, 75, 162, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.auth-box .logo-text {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8e24aa 0%, #ad1457 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.auth-box p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+#auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#auth-form input {
+    padding: 12px 15px;
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#auth-btn {
+    padding: 12px;
+    background: linear-gradient(135deg, #8e24aa 0%, #ad1457 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+#auth-btn:hover {
+    opacity: 0.9;
+}
+
+/* Əsas Konteyner */
+.main-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(118, 75, 162, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Yuxarı Başlıq */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f3e5f5;
+    padding-bottom: 15px;
+}
+
+.logo-large {
+    font-size: 30px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8e24aa 0%, #ad1457 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+#language-select {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid #d1c4e9;
+    background: #fff;
+    color: #8e24aa;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* İki Sütunlu Grid */
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Statistika Paneli */
+.stats-container {
+    display: flex;
+    gap: 10px;
+}
+
+.stat-box {
+    flex: 1;
+    background: linear-gradient(135deg, #f3e5f5, #fce4ec);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e1bee7;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #8e24aa;
+}
+
+.stat-box small {
+    font-size: 11px;
+    color: #ad1457;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 13px;
+    background: #fff;
+}
+
+#todo-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+#todo-input {
+    grid-column: span 2;
+    padding: 10px 15px;
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+select, input[type="date"], button[type="submit"] {
+    padding: 9px;
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 13px;
+    background: #fff;
+}
+
+#add-btn {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #8e24aa 0%, #ad1457 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+#add-btn:hover {
+    opacity: 0.9;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 7px;
+    border: 1px solid #d1c4e9;
+    background: #fff;
+    color: #8e24aa;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #8e24aa 0%, #ad1457 100%);
+    color: white;
+    border-color: transparent;
+}
+
+#todo-list {
+    list-style: none;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #f3e5f5;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+    color: #b0bec5;
+}
+
+.todo-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+/* Dostlar Bölməsi */
+.friends-container {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e1bee7;
+}
+
+.friends-container h3 {
+    font-size: 14px;
+    color: #6a11cb;
+    margin-bottom: 8px;
+}
+
+.add-friend-box {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+#friend-username {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #d1c4e9;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+#add-friend-btn {
+    padding: 6px 12px;
+    background: #8e24aa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#friends-list {
+    list-style: none;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.friend-item {
+    padding: 5px 8px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f3e5f5;
+}
+
+.friend-item:hover {
+    background: #fce4ec;
+}
+
+/* Çat Bölməsi */
+.chat-container {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e1bee7;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 400px;
+}
+
+.chat-container h3 {
+    font-size: 15px;
+    color: #6a11cb;
+    margin-bottom: 10px;
+}
+
+#chat-messages {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #d1c4e9;
+    font-size: 13px;
+    margin-bottom: 10px;
+    max-height: 350px;
+}
+
+.no-chat-selected {
+    color: #aaa;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.chat-input-box {
+    display: flex;
+    gap: 8px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #d1c4e9;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+#send-msg-btn {
+    padding: 10px 18px;
+    background: #8e24aa;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
