@@ -1,4 +1,4 @@
-# ✨ DoDreams - Collaborative Task & Chat App
+#  DoDreams - Collaborative Task & Chat App
 
 "DoDreams" is a modern and aesthetic web application that allows users to manage daily tasks, add friends, and chat in real-time. The project features a pink and purple glassmorphism design and multi-language support.
 
