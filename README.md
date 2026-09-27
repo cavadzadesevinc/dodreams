@@ -6,21 +6,21 @@
 
 ## 🚀 Key Features
 
-* ** Authentication & Registration:** Each user can sign in with their unique username.
-* ** Smart To-Do List:** Add tasks, organize by categories (Work, Study, Personal), assign priorities, and set due dates.
-* ** Search & Filter:** Real-time task search and filtering by "All / Active / Completed" statuses.
-* ** Friends System:** Add friends easily by their username.
-* ** Chat Section:** Private real-time messaging with selected friends.
-* ** Internationalization (i18n):** Instant switching between English, Azerbaijani, and Russian languages.
-* ** Statistics:** Live counters for total and completed tasks.
+*  Authentication & Registration: Each user can sign in with their unique username.
+*  Smart To-Do List: Add tasks, organize by categories (Work, Study, Personal), assign priorities, and set due dates.
+*  Search & Filter: Real-time task search and filtering by "All / Active / Completed" statuses.
+*  Friends System: Add friends easily by their username.
+*  Chat Section: Private real-time messaging with selected friends.
+*  Internationalization (i18n): Instant switching between English, Azerbaijani, and Russian languages.
+*  Statistics: Live counters for total and completed tasks.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **HTML5** – Page structure
-* **CSS3 (Flexbox, Grid, Glassmorphism)** – Modern and stylish UI design
-* **JavaScript (ES6+)** – Application logic and `localStorage` state management
+* HTML5 – Page structure
+* CSS3 (Flexbox, Grid, Glassmorphism) – Modern and stylish UI design
+* JavaScript (ES6+) – Application logic and `localStorage` state management
 
 ---
 
